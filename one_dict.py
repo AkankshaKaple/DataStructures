@@ -16,7 +16,7 @@ while num > 0:
                 input_key = input("Give key to add onto the dictionary : ")
                 input_value = input("Give value to add onto the dictionary : ")
                 dict[input_key] = input_value
-                list.append(dict.items())
+                # list.append(dict.items())  # Append key val pair from dictionay to list
                 # print(dict)
                 size-=1
 

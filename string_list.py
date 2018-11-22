@@ -5,7 +5,8 @@
 list = ['aknaksha' , "Akanksha" , 'kaple', 'aba']
 string = 0
 size = len(list)
-print(size)
+count = 0
+# print(size)
 for i in range(size) :
     size_ele = len(list[i]) - 1
 
@@ -16,5 +17,7 @@ for i in range(size) :
 
 
                 print(list[i])
+                count+=1
+print(count)
 
 

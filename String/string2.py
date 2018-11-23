@@ -6,9 +6,8 @@
 string = input("Enter the string : ")
 # for letter,count in groupby(sorted(string), key = countOf(letter,string)) :
 
-
 dict = {}
 for i in range(len(string)) :
-    key = string.count(string[i]) 
+    key = string.count(string[i])
     dict[string[i]] = key
 print(dict)

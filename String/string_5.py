@@ -1,12 +1,16 @@
-#5. Write a Python function that takes a list of words and returns
+# 5. Write a Python function that takes a list of words and returns
 # the length of the longest one.
-list = ["Akankaha", "AAAAKKKKCCC", "AAAAAAKDHD" , "kkkkkkkkkkkkkk"]
-def fun(list) :  #Function to return the length of largest element in list
-    value = len(list[0])
-    for x in range(len(list)):
-        if value < len(list[x]):
-            value = len(list[x])
-            ele = list[x]
-    return(value) #Resturn length of largest element
-x = fun(list) #Call the function by giving list as a parameter
+g_list_values = ["Akankaha", "AAAAKKKKCCC", "AAAAAAKDHD" , "kkkkkkkkkkkkkk"]
+
+
+def list_of_word_function(l_list_values):  # Function to return the length of largest element in list
+    value = len(l_list_values[0])
+    for x in range(len(l_list_values)):
+        if value < len(l_list_values[x]):
+            value = len(l_list_values[x])
+            ele = l_list_values[x]
+    return value  # Resturn length of largest element
+
+
+x = fun(g_list_values)  # Call the function by giving list as a parameter
 print(x)

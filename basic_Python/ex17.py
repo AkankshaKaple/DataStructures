@@ -17,4 +17,4 @@ print(result_from_method)
 stop_time = time()
 print(stop_time)
 total_time = stop_time - start_time
-print(total_time + "miliseconds")
+print(total_time , "miliseconds")

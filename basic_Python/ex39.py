@@ -1,7 +1,0 @@
-user_first_name = list(input("Enter first name : "))
-user_last_name = list(input("Enter last name : "))
-user_first_name.reverse()
-user_last_name.reverse()
-reverse_first_name = ''.join(user_first_name)
-reverse_last_name = ''.join(user_last_name)
-print(reverse_first_name + " " + reverse_last_name)

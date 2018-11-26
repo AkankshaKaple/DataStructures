@@ -1,11 +1,7 @@
-# 39. Write a Python program to find files and skip directories of a given directory.
-
-import os
-
-basepath = '/home/bridgeit/PycharmProjects/BasicPython/DataStructures/basic_Python'
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        # skip directories
-        continue
-    
+user_first_name = list(input("Enter first name : "))
+user_last_name = list(input("Enter last name : "))
+user_first_name.reverse()
+user_last_name.reverse()
+reverse_first_name = ''.join(user_first_name)
+reverse_last_name = ''.join(user_last_name)
+print(reverse_first_name + " " + reverse_last_name)

@@ -1,3 +1,5 @@
+# 7 Binary Search Tree
+
 class Node:
 
     def __init__(self,data):

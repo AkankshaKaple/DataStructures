@@ -1,4 +1,4 @@
-# Simple Balanced Parentheses : This program checks if the expression is balanced or not
+# 3 Simple Balanced Parentheses : This program checks if the expression is balanced or not
 
 
 class BalancedParenthesis:

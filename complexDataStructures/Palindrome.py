@@ -1,4 +1,4 @@
-# This program checks if the given string is palindrom or not
+# 5 This program checks if the given string is palindrom or not
 
 user_string = list(input("Enter a string: "))
 original_queue = list(user_string)

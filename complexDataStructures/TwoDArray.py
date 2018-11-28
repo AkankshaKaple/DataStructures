@@ -1,9 +1,8 @@
-from array import *
-from collections import deque
-import numpy as np
-list1 = deque([])
-arr = np.array([])
+
+list1 = []
 flag = 0
+array = [[],[[]]]
+list0 = []
 
 for iteration_value in range(0, 10):
     min = iteration_value * 100
@@ -19,15 +18,12 @@ for iteration_value in range(0, 10):
             if flag == 1:
                 if number not in list1:
                     list1.append(number)
-    print("Prime number in range ",min,"-",max, "=",list1)
-    row = iterating_number
-
-    for column in range(len(list1)-1):
-        column = list1.popleft()
-        arr = np.append(arr, np.array([row][column]))
-
-    # Matrix = np.array([iterating_number][list1])
+    # print("Prime number in range ", min, "-", max, "=", list1)
+    list0.append(min)
+    list0.append(max)
+    array[0] = list0
+    array[1][0] = list1
+    print(array)
+    list0.clear()
     list1.clear()
-print(arr)
-
 

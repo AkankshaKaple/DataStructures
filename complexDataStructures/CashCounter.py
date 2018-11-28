@@ -20,47 +20,39 @@ class CountCash:
 
     def bank_operations(self,  g_people_queue,people_count):
         f_people_queue = deque(g_people_queue)
-
-
         g_total_cash = 10000000
         print(f_people_queue)
+        print(people_count)
 
-        for iterating_element in range(people_count):
-            if f_people_queue[iterating_element] == 1:
-                # if g_total_cash > 100000:
-                    try:
-                        print("1 -- ", f_people_queue)
-                        f_people_queue.popleft()
-                        print("2--", f_people_queue)
-                        f_amount = int(input("Enter your amount : "))
-                        g_total_cash = g_total_cash + f_amount
-                        print("Remaining = ", g_total_cash)
-                    except IndexError:
-                        print("Pass")
-                        pass
+        for iterating_element in range(len(f_people_queue)):
+                # try:
+                    if f_people_queue[iterating_element] == 1:
 
-            elif f_people_queue[iterating_element] == 2:
-                try:
-                    f_people_queue.popleft()
-                    f_amount = int(input("Enter your amount : "))
-                    g_total_cash = g_total_cash - f_amount
-                    print("Remaining = ", g_total_cash)
+                            f_amount = int(input("Enter your amount to withdraw : "))
+                            g_total_cash = g_total_cash - f_amount
+                            print("Remaining = ", g_total_cash)
+                            f_people_queue.popleft()
+                            print(f_people_queue)
 
-                except IndexError:
-                    # try:
-                    #     while g_total_cash > 0:
-                    #         f_amount = int(input("Enter your amount : "))
-                    #         g_total_cash = g_total_cash - f_amount
-                    #         print("Remaining = ", g_total_cash)
-                    #
-                    # except IndexError:
-                        print("Closed!!!")
-        return
+                # except IndexError:
+                #         print("Pass")
 
-    g_people_queue = deque([])
+                # try:
+                    elif f_people_queue[iterating_element] == 2:
+
+                            f_amount = int(input("Enter your amount to deposit: "))
+                            g_total_cash = g_total_cash + f_amount
+                            print("Remaining = ", g_total_cash)
+                            f_people_queue.popleft()
+
+                # except IndexError:
+                #             print("Closed!!!")
 
 
-    print("Options : "
+g_people_queue = deque([])
+
+
+print("Options : "
           "1--Withdraw"
           "2--Deposit")
 

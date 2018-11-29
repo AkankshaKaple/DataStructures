@@ -18,8 +18,10 @@ class CountCash:
                 print("Invalid Choice")
         return f_people_queue
 
-    def bank_operations(self,  g_people_queue,people_count):
+
+    def bank_operations(self, g_people_queue, people_count):
         f_people_queue = deque(g_people_queue)
+        # print(f_people_queue)
         g_total_cash = 10000000
         print(f_people_queue)
         print(people_count)

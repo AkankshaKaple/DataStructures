@@ -49,38 +49,29 @@ class LinkedList:
         current_node = None
         return
 
-    def traverse(self):
-        count = 0
+    def reverse(self, data):
         current_node = self.head
-        while  current_node.next != None:
-            count += 1
-            current_node = current_node.next
-        # print(count)
-        return count
-
-    def reverse(self):
-        while ll.traverse() > 0:
-            current_node = self.head
-            if current_node.next == None:
+        while current_node != None:
+            if current_node == None:
                 print(current_node.data)
                 self.head = current_node.next
                 current_node = None
-            return
 
-        previous_node = None
-        while current_node.next != None:
-            previous_node = current_node
-            current_node = current_node.next
-        previous_node.next = current_node.next
-        current_node = None
         return
 
 
+
+    def traverse(self):
+        count = 0
+        current_node = self.head
+        while current_node.next != None:
+            count += 1
+            current_node = current_node.next
+        return count
+
+
 ll = LinkedList()
-# ll.append(12)
-# ll.append(1)
-# ll.append('ABC')
-# ll.append("XYZ")
+
 prime_numbers = []
 anagram = []
 flag = 0
@@ -99,6 +90,8 @@ for number in range(0, 100):
                 ll.append(number)
 
 ll.print()
+s1 = []
+s2 = []
 length = ll.traverse()
 for iterating_number in range(length):
     for iterating_number1 in range(length):
@@ -109,10 +102,18 @@ for iterating_number in range(length):
                     queue_2 = (list(prime_numbers[iterating_number1]))
                     queue_1.sort()
                     queue_2.sort()
-                    # print(list_1)
+                    # print(queue_1)
                     if queue_1 == queue_2:
-                        print(prime_numbers[iterating_number], " is anangram of ", prime_numbers[iterating_number1])
-            else:
-                pass
-        else:
-            pass
+                        s1.append(prime_numbers[iterating_number])
+                        s2.append(prime_numbers[iterating_number1])
+                        # print(prime_numbers[iterating_number], " is anangram of ",
+                        #       prime_numbers[iterating_number1])
+while s1 != None:
+    try:
+        val1 = s1.pop()
+        val2 = s2.pop()
+        print(val1, " is anangram of ", val2)
+    except IndexError:
+        pass
+
+

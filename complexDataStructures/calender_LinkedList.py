@@ -35,7 +35,7 @@ class Calendar:
                 number_of_days = 29
             else:
                 number_of_days = 28
-        return  number_of_days
+        return number_of_days
 
 
     def week_day(self, month, year):

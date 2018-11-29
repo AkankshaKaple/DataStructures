@@ -31,7 +31,7 @@ class Node:
             self.right_child.PrintTree()
 
 tree = Node(3)
-list = [6,5,9,3,4]
+list = [3]
 for i in range(len(list)):
     tree.insertion(list[i])
 tree.PrintTree()

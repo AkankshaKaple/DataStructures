@@ -58,6 +58,10 @@ class LinkedList:
         # print(count)
         return count
 
+
+
+
+
 #
 # ll = LinkedList()
 # ll.append(12)

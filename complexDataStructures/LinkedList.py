@@ -58,13 +58,13 @@ class LinkedList:
         # print(count)
         return count
 
-
-ll = LinkedList()
-ll.append(12)
-ll.append(1)
-ll.append('ABC')
-ll.append("XYZ")
-# ll.insertion(ll.head.next.next,16)
-t = ll.traverse()
-ll.print()
-print("Length : ", t)
+#
+# ll = LinkedList()
+# ll.append(12)
+# ll.append(1)
+# ll.append('ABC')
+# ll.append("XYZ")
+# # ll.insertion(ll.head.next.next,16)
+# t = ll.traverse()
+# ll.print()
+# print("Length : ", t)

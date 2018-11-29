@@ -4,6 +4,8 @@
 # year = int(input("Enter year : "))
 # print(calendar.month(year,month))
 
+from DataStructures.complexDataStructures.LinkedList import *
+ll = LinkedList()
 
 class Calendar:
 
@@ -89,17 +91,18 @@ for month_day in range(1, number_of_days):
     # for i in range(day):
         # calender_row.append(' ')
         if month_day % 7 == 0:
-            calender_row.append(month_day)
+            ll.append(month_day)
         else:
-            calender_row.append(month_day)
-
+            ll.append(month_day)
+ll.print()
 # print(calender_row)
-        if len(calender_row) == 7:
-            print(calender_row)
-            calender_row.clear()
-        else:
-            print(calender_row)
-            calender_row.clear()
+#         if ll.traverse() == 7:
+#
+#             print(calender_row)
+#             calender_row.clear()
+#         else:
+#             print(calender_row)
+#             calender_row.clear()
 
 
 

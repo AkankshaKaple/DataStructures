@@ -23,7 +23,7 @@ class LinkedList:
         return
 
 
-    def print(self):
+    def printing(self):
         current_node = self.head
         while current_node != None:
             print(current_node.data)
@@ -105,8 +105,9 @@ for number in range(0, 100):
             if number not in prime_numbers:
                 prime_numbers.append(str(number))
                 ll.append(number)
+                ll.printing()
 
-ll.print()
+
 length = ll.traverse()
 for iterating_number in range(length):
     for iterating_number1 in range(length):

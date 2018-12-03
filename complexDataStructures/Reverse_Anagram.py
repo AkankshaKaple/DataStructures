@@ -1,5 +1,6 @@
 class Node:
     def __init__(self, data):
+        # It creates the node with data and address fields
         self.data = data
         self.next = None
 
@@ -7,7 +8,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-
+    # It adds the node with given data at the end of the list
     def append(self,data):
         new_node = Node(data)
         if self.head is None:
@@ -26,13 +27,14 @@ class LinkedList:
             print(current_node.data)
             current_node = current_node.next
 
+    # It inserts data with given node at particular location
 
     def insertion(self,previous_node, data):
         new_node = Node(data)
         new_node.next = previous_node.next
         previous_node.next = new_node
 
-
+    # Delete node with given data
 
     def deletion(self, data):
         current_node = self.head
@@ -49,6 +51,7 @@ class LinkedList:
         current_node = None
         return
 
+# It reverses the linked list
     def reverse(self, data):
         current_node = self.head
         while current_node != None:
@@ -59,7 +62,7 @@ class LinkedList:
 
         return
 
-
+    # Count number nodes in linked list
 
     def traverse(self):
         count = 0

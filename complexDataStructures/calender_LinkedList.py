@@ -1,3 +1,5 @@
+# Calender using Linked List
+
 # import calendar
 #
 # month = int(input("Enter month : "))
@@ -9,6 +11,7 @@ ll = LinkedList()
 
 class Calendar:
 
+    # See if given year is a leap year or not
     def leapYear(self, year):
         if len(year) == 4:
             if int(year) % 400 == 0:
@@ -24,6 +27,8 @@ class Calendar:
         else:
             return True
 
+        # Find thw number of days in given month
+
     def month_day(self,month,year):
         if month == 'January' or 'March' or 'May' or 'July' or 'August' \
                 or 'October' or 'December':
@@ -37,7 +42,7 @@ class Calendar:
                 number_of_days = 28
         return number_of_days
 
-
+    # Find wich day it is on 1sst of that month
     def week_day(self, month, year):
 
         year1 = year - ((14 - month) / 12)
@@ -46,6 +51,7 @@ class Calendar:
         day1 = (1 + x + (31*month1) / 12) % 7
         return int(day1)
 
+    # Convert month into coreesponding integer value for calculation
     def month_int(self,month):
         if month == 'January':
             return 1

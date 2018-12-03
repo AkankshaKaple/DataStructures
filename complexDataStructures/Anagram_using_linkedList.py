@@ -1,4 +1,7 @@
+# Anagram using Linked List
+
 class Node:
+    # It creates a node with data and next field
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -7,7 +10,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-
+# It addes the data to the end of list
     def append(self,data):
         new_node = Node(data)
         if self.head is None:
@@ -26,14 +29,17 @@ class LinkedList:
             print(current_node.data)
             current_node = current_node.next
 
-
+# It adds data at perticular position
     def insertion(self,previous_node, data):
         new_node = Node(data)
+        # Create new node with given data in it
         new_node.next = previous_node.next
+        # Save address of next node into new node
         previous_node.next = new_node
+        # Then set adress of new node into the previous node
 
 
-
+# It deletes the node at the end of list
     def deletion(self, data):
         current_node = self.head
         if current_node.data == data:
@@ -49,6 +55,7 @@ class LinkedList:
         current_node = None
         return
 
+# It calculates the number of nodes in the linked list
     def traverse(self):
         count = 0
         current_node = self.head
@@ -58,6 +65,7 @@ class LinkedList:
         # print(count)
         return count
 
+# It reverses the list
     def reverse(self):
         while ll.traverse() > 0:
             current_node = self.head

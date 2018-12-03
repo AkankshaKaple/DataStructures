@@ -8,9 +8,11 @@ class BalancedParenthesis:
         flag = 0
         if len(f_expression) > 0:
             for iterating_element in range(0, len(f_expression)):
+                # If you find "(" push it onto the stack
                 if f_expression[iterating_element] == '(':
                     parentheses_stack.append(f_expression[iterating_element])
                     flag = 1
+                    # if you find ")" then pop "(" from stack
                 elif f_expression[iterating_element] == ")":
                     try:
                         parentheses_stack.pop()
